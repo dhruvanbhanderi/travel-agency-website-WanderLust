@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wanderlust Travels</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header, footer {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            color: #3498db;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+        .social-icons a {
+            color: #3498db;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #2980b9;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer p { margin: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wanderlust Travels</h1>
+        <nav>
+            <a href="home_page.html" style="color: white; margin: 0 10px; text-decoration: none;">Home</a>
+            <a href="destinations_page.html" style="color: white; margin: 0 10px; text-decoration: none;">Destinations</a>
+            <a href="tours_page.html" style="color: white; margin: 0 10px; text-decoration: none;">Tours & Packages</a>
+            <a href="about.html" style="color: white; margin: 0 10px; text-decoration: none;">About Us</a>
+            <a href="contact.html" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <section class="contact-info">
+            <p><strong>Email:</strong> info@wanderlusttravels.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Address:</strong> 123 Adventure Lane, Anand, Gujarat, India</p>
+            <div class="social-icons">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="YouTube">🎥</a>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+        <p>Developed by Dhruvan Bhanderi and Tirth Jani</p>
+    </footer>
+</body>
+</html>

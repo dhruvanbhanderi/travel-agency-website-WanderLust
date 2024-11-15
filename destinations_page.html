@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel - Destinations</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .destination-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .destination-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .destination-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .destination-info {
+            padding: 1rem;
+        }
+        .destination-info h3 {
+            margin-top: 0;
+        }
+        .explore-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .explore-btn:hover {
+            background-color: #2980b9;
+        }
+        .hero {
+            background-image: url('hero-beach.jpg'); /* Replace with your desired hero image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wanderlust Travels</h1>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="destinations_page.html">Destinations</a></li>
+                <li><a href="tours_page.html">Tours & Packages</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore Our Destinations</h1>
+                <p>Discover the world's most breathtaking locations</p>
+            </div>
+        </section>
+
+        <section class="destination-grid">
+            <div class="destination-item">
+                <img src="paris-destination.jpg" alt="Paris">
+                <div class="destination-info">
+                    <h3>Paris, France</h3>
+                    <p>Experience the city of love, art, and exquisite cuisine.</p>
+                    <a href="#" class="explore-btn">Explore Paris</a>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="tokyo-destination.jpg" alt="Tokyo">
+                <div class="destination-info">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Immerse yourself in a unique blend of tradition and futuristic technology.</p>
+                    <a href="#" class="explore-btn">Explore Tokyo</a>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="bali-destination.jpg" alt="Bali">
+                <div class="destination-info">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Relax on pristine beaches and explore lush tropical landscapes.</p>
+                    <a href="#" class="explore-btn">Explore Bali</a>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="ny-destination.jpg" alt="New York">
+                <div class="destination-info">
+                    <h3>New York, USA</h3>
+                    <p>Dive into the energy of the city that never sleeps.</p>
+                    <a href="#" class="explore-btn">Explore New York</a>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="rome-destination.jpg" alt="Rome">
+                <div class="destination-info">
+                    <h3>Rome, Italy</h3>
+                    <p>Step back in time and indulge in Italian culture and cuisine.</p>
+                    <a href="#" class="explore-btn">Explore Rome</a>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="sydney-destination.jpg" alt="Sydney">
+                <div class="destination-info">
+                    <h3>Sydney, Australia</h3>
+                    <p>Experience the perfect blend of urban life and natural wonders.</p>
+                    <a href="#" class="explore-btn">Explore Sydney</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+        <p>Developed by Dhruvan Bhanderi and Tirth Jani</p>
+    </footer>
+</body>
+</html>

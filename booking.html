@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Wanderlust Travels</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header, footer {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            color: #3498db;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .booking-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer p { margin: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wanderlust Travels</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Book Your Tour</h2>
+        <form class="booking-form" id="bookingForm" action="process_booking.php" method="POST">
+            <label for="tour-package">Select Tour Package</label>
+            <select id="tour-package" name="tour-package" required>
+                <option value="paris-getaway">Paris Getaway</option>
+                <option value="tokyo-explorer">Tokyo Explorer</option>
+                <option value="bali-adventure">Bali Adventure</option>
+                <option value="new-york-highlights">New York Highlights</option>
+            </select>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+        <p>Developed by Dhruvan Bhanderi and Tirth Jani</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            const tourPackage = document.getElementById('tour-package').value;
+
+        
+            const confirmationUrl = `submit_booking.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&message=${encodeURIComponent(message)}&tourPackage=${encodeURIComponent(tourPackage)}`;
+
+            window.location.href = confirmationUrl;
+        }
+    </script>
+</body>
+</html>

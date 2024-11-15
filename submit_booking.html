@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Wanderlust Travels</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header, footer {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            color: #3498db;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        footer p { margin: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wanderlust Travels</h1>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Booking Confirmation</h2>
+        <section class="section-content">
+            <h3>Thank you for booking with Wanderlust Travels!</h3>
+            <p>We have received your booking details. Below are the details of your booking:</p>
+
+            <p><strong>Tour Package:</strong> <span id="tourPackage"></span></p>
+            <p><strong>Full Name:</strong> <span id="name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+            <p><strong>Message:</strong> <span id="message"></span></p>
+        </section>
+        
+        <section class="section-content">
+            <h3>What Happens Next?</h3>
+            <p>Our team will review your booking and send you a confirmation email with the next steps. If you have any further questions, feel free to contact us at info@wanderlusttravels.com.</p>
+            <p>We look forward to helping you plan an unforgettable journey!</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wanderlust Travels. All rights reserved.</p>
+        <p>Developed by Dhruvan Bhanderi and Tirth Jani</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        document.getElementById('tourPackage').textContent = urlParams.get('tourPackage');
+        document.getElementById('name').textContent = urlParams.get('name');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('phone').textContent = urlParams.get('phone');
+        document.getElementById('message').textContent = urlParams.get('message') || "No additional message provided.";
+    </script>
+</body>
+</html>
